@@ -1,3 +1,4 @@
+import gsap from 'gsap';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./Navbar.css";
@@ -6,6 +7,7 @@ const Navbar = () => {
     const [mode, setMode] = useState(localStorage.getItem("mode") || "dark");
 
     useEffect(()=>{
+        // toggle dark and light mode
         localStorage.setItem("mode", mode);
 
         if (mode === 'dark') {
@@ -15,6 +17,11 @@ const Navbar = () => {
         }
 
     }, [mode]);
+
+    useEffect(()=>{
+        // navigation menu animation
+        gsap.fromTo(".navigation",{y: -100}, {y: 0, duration: 0.7, ease: "power4.out"});
+    }, [])
 
     const handleMenuClick = () => {
         console.log("click")
