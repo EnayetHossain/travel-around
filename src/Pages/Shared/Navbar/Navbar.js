@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./Navbar.css";
 
 const Navbar = () => {
+    const [mode, setMode] = useState(localStorage.getItem("mode") || "dark");
+
+    useEffect(()=>{
+        localStorage.setItem("mode", mode);
+
+        if (mode === 'dark') {
+            document.body.classList.remove('light-mode');
+        } else {
+            document.body.classList.add('light-mode');
+        }
+
+    }, [mode]);
+
     const handleMenuClick = () => {
         console.log("click")
     }
@@ -29,7 +42,9 @@ const Navbar = () => {
                 </ul>
 
                 <div className='theme'>
-                    <button>light</button>
+                    <div className='circle' title='Change mode' onClick={()=> setMode(mode === 'dark' ? 'light' : 'dark')}>
+                        <div className='inner-circle'></div>
+                    </div>
                 </div>
             </div>
 

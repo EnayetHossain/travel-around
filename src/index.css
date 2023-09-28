@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap');
 
 :root {
-  --primary-color: 255, 245, 229;
-  --secondary-color: 29, 29, 29;
+  --primary-color: 29, 29, 29;
+  --secondary-color: 255, 245, 229;
   --yellow-color: 250, 221, 75;
   --red-color: 232, 82, 67;
   --white: 255, 255, 255;
@@ -21,9 +21,9 @@ html {
   scroll-behavior: smooth;
 }
 
-.dark-mode {
-  --primary-color: 29, 29, 29;
-  --secondary-color: 255, 245, 229;
+.light-mode {
+  --primary-color: 255, 245, 229;
+  --secondary-color: 29, 29, 29;
 }
 
 .desktop-max {
@@ -51,4 +51,14 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+::selection {
+  background-color: rgb(var(--secondary-color));
+  color: rgb(var(--primary-color));
+}
+
+::-moz-selection {
+  background-color: rgb(var(--secondary-color));
+  color: rgb(var(--primary-color));
 }
