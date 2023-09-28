@@ -1,0 +1,95 @@
+.menu-options,
+.menu-items,
+.navigation {
+    display: flex;
+}
+
+.navigation {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 1em !important;
+}
+
+.navigation a {
+    color: rgb(var(--secondary-color));
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo>svg {
+    width: 4rem;
+}
+
+.logo>svg path {
+    fill: rgb(var(--secondary-color));
+}
+
+.logo-text {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-left: 0.5em;
+}
+
+.ham-bar {
+    width: 7rem;
+    height: 1.7rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.top-bar,
+.bottom-bar {
+    width: 100%;
+    height: 0.2rem;
+    background-color: rgb(var(--secondary-color));
+    position: absolute;
+    transition: 0.3s cubic-bezier(0.08, 0.65, 0.26, 0.88);
+}
+
+.top-bar {
+    top: 0;
+    left: 0;
+}
+
+.bottom-bar {
+    bottom: 0;
+    right: 0;
+}
+
+.ham-bar:hover .top-bar {
+    left: -30%;
+}
+
+.ham-bar:hover .bottom-bar {
+    right: -30%;
+}
+
+.menu-options {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-items {
+    margin-right: 1em;
+}
+
+.menu-items .menu-item {
+    margin: 0 1em;
+}
+
+.menu-item a {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 1022px) {
+
+    .menu-items,
+    .logo-text {
+        display: none;
+    }
+}
