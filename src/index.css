@@ -1,10 +1,37 @@
-body {
+:root {
+  --primary-color: 255, 245, 229;
+  --secondary-color: 29, 29, 29;
+  --yellow-color: 250, 221, 75;
+  --red-color: 232, 82, 67;
+  --white: 255, 255, 255;
+}
+
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.dark-mode {
+  --primary-color: 29, 29, 29;
+  --secondary-color: 255, 245, 229;
+}
+
+body {
+  font-size: 1.6rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(var(--primary-color));
 }
 
 code {
