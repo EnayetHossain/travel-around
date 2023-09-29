@@ -1,0 +1,49 @@
+.hero-section {
+    /* background-color: red; */
+    padding: 4em 0 !important;
+}
+
+.hero-content {
+    color: rgb(var(--secondary-color));
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    max-width: max-content;
+}
+
+.hero-content h1 {
+    font-size: clamp(6rem, 8.5vw, 11.3rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.first {
+    overflow: hidden;
+}
+
+.end {
+    /* margin-left: auto; */
+    /* background-color: rebeccapurple; */
+    text-align: right;
+    overflow: hidden;
+}
+
+.first h1,
+.text-group h1,
+.end h1 {
+    transform: translateY(100%);
+}
+
+.text-group {
+    /* background-color: red; */
+    display: flex;
+    overflow: hidden;
+}
+
+/* .text-group h1:first-child {
+    transform: translateX(1%);
+} */
+
+.text-group h1:last-child {
+    margin-left: 0.2em;
+}

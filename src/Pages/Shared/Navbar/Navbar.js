@@ -20,7 +20,7 @@ const Navbar = () => {
 
     useEffect(()=>{
         // navigation menu animation
-        gsap.fromTo(".navigation",{y: -100}, {y: 0, duration: 0.7, ease: "power4.out"});
+        gsap.fromTo(".navigation",{y: -100}, {y: 0, duration: 1, ease: "power4.out"});
     }, [])
 
     const handleMenuClick = () => {
