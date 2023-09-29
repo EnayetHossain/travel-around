@@ -1,20 +1,44 @@
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useEffect } from 'react';
+import useTextReveal from '../../../Hooks/TextReveal';
 import "./HeroSection.css";
 
+
+gsap.registerPlugin(ScrollTrigger);
+
 const HeroSection = () => {
-    useEffect(()=>{
-        const elements = document.querySelectorAll(".first h1, .text-group h1, .end h1");
+    // custom hook
+    useTextReveal(".first h1, .text-group h1, .end h1");
+
+    useEffect(() => {
         
-        // content reveal animation
-        gsap.to(elements, {
-            y: 0,
-            stagger: 0.2,
+        // console.log(document.querySelector(".text-group h1:first-child"))
+        const tl = gsap.timeline();
+
+        tl.to(".text-group h1:first-child", {
+            x: -30,
             duration: 0.5,
-            ease: "circ.out"
+        }, "once").to(".text-group h1:last-child", {
+            x: -70,
+            duration: 0.5,
+        }, "once").to(".end h1", {
+            x: -230,
+            duration: 0.5,
+        }, "once")
+
+        ScrollTrigger.create({
+            animation: tl,
+            trigger: ".hero-content",
+            toggleActions: "restart pause reverse none",
+            start: "top 20%",
+            markers: false,
+            scrub: true,
         });
 
     }, [])
+
+
     return (
         <div className='hero-section desktop-max'>
             <div className='hero-content'>

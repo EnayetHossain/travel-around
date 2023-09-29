@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import "./Navbar.css";
 
 const Navbar = () => {
+    // get current user preferred mode
     const [mode, setMode] = useState(localStorage.getItem("mode") || "dark");
 
     useEffect(()=>{
