@@ -11,10 +11,11 @@ const useSmoothScroll = (root, ease) =>{
     
         let container = document.querySelector(root);
 
+        // calculate the transform values based on page scroll
         const smoothScroll = ()=>{
             current = lerp(current, target, ease);
-            current = parseFloat(current.toFixed(2));
-            target = window.scrollY;
+            current = parseFloat(current.toFixed(2)); // restrict the value to two decimal point
+            target = window.scrollY; // influence target value based on current page scroll value
             setTransform(container, `translateY(${-current}px)`);
             requestAnimationFrame(smoothScroll)
         }

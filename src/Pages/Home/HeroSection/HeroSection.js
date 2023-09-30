@@ -11,13 +11,14 @@ gsap.registerPlugin(ScrollTrigger);
 const HeroSection = () => {
     // text reveal animation
     useTextReveal(".first h1, .text-group h1, .end h1");
-
+    console.log(window.scrollY)
     useEffect(() => {
         
-        // console.log(document.querySelector(".text-group h1:first-child"))
+        // animation timelines
         const tl = gsap.timeline({ defaults: { duration: 0.5 } });
         const tl2 = gsap.timeline({defaults: {duration: 0.4}});
 
+        // text animation
         tl.to(".text-group h1:first-child", {
             x: -30,
         }, "once").to(".text-group h1:last-child", {
@@ -26,6 +27,18 @@ const HeroSection = () => {
             x: -230,
         }, "once")
 
+        // animate text on scroll
+        ScrollTrigger.create({
+            animation: tl,
+            trigger: ".hero-content",
+            toggleActions: "restart pause reverse none",
+            start: "top 20%",
+            markers: false,
+            scrub: 1.5,
+        });
+
+
+        // floating links animation
         tl2.to(".about", {
             opacity: 1,
             delay: 1,
@@ -35,15 +48,6 @@ const HeroSection = () => {
             opacity: 1
         });
 
-        // on scroll animation
-        ScrollTrigger.create({
-            animation: tl,
-            trigger: ".hero-content",
-            toggleActions: "restart pause reverse none",
-            start: "top 20%",
-            markers: false,
-            scrub: 1.5,
-        });
 
     }, [])
 
