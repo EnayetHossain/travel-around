@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import useTextReveal from '../../../Hooks/TextReveal';
 import "./HeroSection.css";
 
@@ -15,6 +16,7 @@ const HeroSection = () => {
         
         // console.log(document.querySelector(".text-group h1:first-child"))
         const tl = gsap.timeline({ defaults: { duration: 0.5 } });
+        const tl2 = gsap.timeline({defaults: {duration: 0.4}});
 
         tl.to(".text-group h1:first-child", {
             x: -30,
@@ -24,6 +26,15 @@ const HeroSection = () => {
             x: -230,
         }, "once")
 
+        tl2.to(".about", {
+            opacity: 1,
+            delay: 1,
+        }).to(".services",{
+            opacity: 1
+        }).to(".process", {
+            opacity: 1
+        });
+
         // on scroll animation
         ScrollTrigger.create({
             animation: tl,
@@ -31,7 +42,7 @@ const HeroSection = () => {
             toggleActions: "restart pause reverse none",
             start: "top 20%",
             markers: false,
-            scrub: 1,
+            scrub: 1.5,
         });
 
     }, [])
@@ -39,6 +50,18 @@ const HeroSection = () => {
 
     return (
         <div className='hero-section desktop-max'>
+            <div className='about link'>
+                <Link to="/about">Know More<br/>About Us</Link>
+            </div>
+
+            <div className='services link'>
+                <Link to="/services">Our<br/>services</Link>
+            </div>
+
+            <div className='process link'>
+                <Link to="/process">Our<br/>process</Link>
+            </div>
+
             <div className='hero-content'>
                 <div className='first'>
                     <h1>Explore the</h1>

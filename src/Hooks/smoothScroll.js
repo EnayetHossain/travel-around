@@ -7,8 +7,6 @@ const useSmoothScroll = (root, ease) =>{
     useEffect(()=>{
         let current = 0;
         let target = 0;
-    
-        // let windowWidth;
         let rootHeight;
     
         let container = document.querySelector(root);
@@ -22,7 +20,6 @@ const useSmoothScroll = (root, ease) =>{
         }
 
         const setAnimation = ()=>{
-            // windowWidth = window.innerWidth;
             rootHeight = container.getBoundingClientRect().height;
             document.body.style.height = `${rootHeight}px`;
             smoothScroll();
@@ -34,7 +31,6 @@ const useSmoothScroll = (root, ease) =>{
         if(!isTouch){
             setAnimation();
         }
-
 
     }, [root, ease]);
 
