@@ -8,32 +8,30 @@ import "./HeroSection.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection = () => {
-    // custom hook
+    // text reveal animation
     useTextReveal(".first h1, .text-group h1, .end h1");
 
     useEffect(() => {
         
         // console.log(document.querySelector(".text-group h1:first-child"))
-        const tl = gsap.timeline();
+        const tl = gsap.timeline({ defaults: { duration: 0.5 } });
 
         tl.to(".text-group h1:first-child", {
             x: -30,
-            duration: 0.5,
         }, "once").to(".text-group h1:last-child", {
             x: -70,
-            duration: 0.5,
         }, "once").to(".end h1", {
             x: -230,
-            duration: 0.5,
         }, "once")
 
+        // on scroll animation
         ScrollTrigger.create({
             animation: tl,
             trigger: ".hero-content",
             toggleActions: "restart pause reverse none",
             start: "top 20%",
             markers: false,
-            scrub: true,
+            scrub: 1,
         });
 
     }, [])
