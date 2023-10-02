@@ -103,3 +103,63 @@
 .text-group h1:last-child {
     margin-left: 0.2em;
 }
+
+@media only screen and (max-width: 678px) {
+    .hero-content {
+        margin: 0 auto;
+    }
+
+    .link {
+        width: 11rem;
+        height: 11rem;
+        font-size: 1.3rem;
+    }
+
+    .about {
+        top: -5%;
+        left: 53%;
+    }
+
+    .services {
+        top: 53%;
+        left: 3%;
+    }
+
+    .process {
+        top: 58%;
+        left: 64%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.5rem, 8.5vw, 9rem);
+        text-align: center;
+        line-height: 1.6;
+    }
+}
+
+@media only screen and (max-width: 388px) {
+    .hero-section {
+        padding: 5em 0 !important;
+    }
+
+    .hero-content h1 {
+        line-height: 2;
+    }
+
+    .about {
+        top: 3%;
+        left: 66%;
+
+    }
+
+    .services {
+        left: -1%;
+        top: 51%;
+    }
+
+    .link {
+        width: 10rem;
+        height: 10rem;
+        font-size: 1.2rem;
+    }
+}

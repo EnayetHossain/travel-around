@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const HeroSection = () => {
     // text reveal animation
     useTextReveal(".first h1, .text-group h1, .end h1");
-    console.log(window.scrollY)
+    // console.log(window.scrollY)
     useEffect(() => {
         
         // animation timelines
@@ -47,7 +47,6 @@ const HeroSection = () => {
         }).to(".process", {
             opacity: 1
         });
-
 
     }, [])
 
