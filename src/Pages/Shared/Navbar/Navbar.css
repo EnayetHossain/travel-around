@@ -129,6 +129,7 @@
     padding: 2em 0 5em;
     opacity: 0;
     pointer-events: none;
+    overflow-y: auto;
 }
 
 .main-menu-active {

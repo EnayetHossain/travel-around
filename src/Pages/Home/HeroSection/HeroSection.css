@@ -153,19 +153,24 @@
     }
 
     .about {
-        top: 3%;
-        left: 66%;
+        top: 8%;
+        left: 71%;
 
     }
 
     .services {
-        left: -1%;
-        top: 51%;
+        left: 2%;
+        top: 53%;
+    }
+
+    .process {
+        top: 58%;
+        left: 69%;
     }
 
     .link {
-        width: 10rem;
-        height: 10rem;
-        font-size: 1.2rem;
+        width: 8rem;
+        height: 8rem;
+        font-size: 1.1rem;
     }
 }
