@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import MenuAnimation from '../../../Animations/MenuAnimation';
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -23,9 +24,9 @@ const Navbar = () => {
     useEffect(() => {
         // navigation menu animation
         gsap.fromTo(".navigation", { y: -100 }, { y: 0, duration: 1, ease: "power4.out" });
-
-        
     }, [])
+
+    MenuAnimation(open)
 
     return (
         <nav className='navigation desktop-max'>
@@ -52,7 +53,7 @@ const Navbar = () => {
                             <li className='social-option'><Link to={"/linkedin"}>Linkedin</Link></li>
                             <li className='social-option'><Link to={"/youtube"}>Youtube</Link></li>
                             <li className='social-option'><Link to={"/twitter"}>Twitter</Link></li>
-                            <li className='social-option'><Link to={"/twitter"}>Instagram</Link></li>
+                            <li className='social-option'><Link to={"/instagram"}>Instagram</Link></li>
                         </ul>
                     </div>
 
