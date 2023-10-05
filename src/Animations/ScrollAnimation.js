@@ -31,7 +31,7 @@ const scrollAnimation = (titles, pseudoElement, description, trigger) => {
         trigger: trigger,
         toggleActions: "play pause resume reverse",
         markers: false,
-        start: "top 85%"
+        start: "top 60%"
     })
 }
 

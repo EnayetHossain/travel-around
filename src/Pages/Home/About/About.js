@@ -12,13 +12,13 @@ const About = () => {
         const isTouch = isTouchDevice()
         
         if(!isTouch){
-            scrollAnimation(titles,".about-content:before", description, ".about-section")
+            scrollAnimation(titles,".about-content:before", description, ".about-section", false)
         }
 
     }, [])
     
     return (
-        <section className='about-section desktop-max'>
+        <section className='about-section desktop-max' data-scroll-section>
             <div className='about-container'>
                 <p>About us</p>
 

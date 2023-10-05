@@ -152,25 +152,7 @@
         line-height: 2;
     }
 
-    .about {
-        top: 8%;
-        left: 71%;
-
-    }
-
-    .services {
-        left: 2%;
-        top: 53%;
-    }
-
-    .process {
-        top: 58%;
-        left: 69%;
-    }
-
     .link {
-        width: 8rem;
-        height: 8rem;
-        font-size: 1.1rem;
+        display: none;
     }
 }

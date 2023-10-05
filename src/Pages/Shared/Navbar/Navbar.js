@@ -29,7 +29,7 @@ const Navbar = () => {
     MenuAnimation(open)
 
     return (
-        <nav className='navigation desktop-max'>
+        <nav className='navigation desktop-max' data-scroll-section>
             <div className={`main-menu ${open ? "main-menu-active" : ""}`}>
                 <div className='menu-title'>
                     <h1>MENU</h1>

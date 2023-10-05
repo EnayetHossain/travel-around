@@ -1,41 +1,46 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 import { useEffect } from "react";
-import lerp from "../utils/LinearInterpolation";
-import setTransform from "../utils/setTransform";
-import isTouchDevice from "../utils/touchDevice";
 
-const useSmoothScroll = (root, ease) =>{
-    useEffect(()=>{
-        let current = 0;
-        let target = 0;
-        let rootHeight;
-    
-        let container = document.querySelector(root);
+const useSmoothScroll = (start, root) => {
+    gsap.registerPlugin(ScrollTrigger);
 
-        // calculate the transform values based on page scroll
-        const smoothScroll = ()=>{
-            current = lerp(current, target, ease);
-            current = parseFloat(current.toFixed(2)); // restrict the value to two decimal point
-            target = window.scrollY; // influence target value based on current page scroll value
-            setTransform(container, `translateY(${-current}px)`);
-            requestAnimationFrame(smoothScroll)
-        }
+    useEffect(() => {
+        if (!start) return;
 
-        const setAnimation = ()=>{
-            rootHeight = container.getBoundingClientRect().height;
-            document.body.style.height = `${rootHeight}px`;
-            smoothScroll();
-        }
 
-        // avoid smooth scrolling in touch devices
-        const isTouch = isTouchDevice();
+        const container = document.querySelector(root);
+        console.log(container);
 
-        if(!isTouch){
-            setAnimation();
-        }
+        const locoScroll = new LocomotiveScroll({
+            el: container,
+            smooth: true,
+            multiplier: 1,
+            class: "is-reveal"
+        });
 
-    }, [root, ease]);
+        locoScroll.on("scroll", ScrollTrigger.update);
 
-    return null
+        ScrollTrigger.scrollerProxy(container, {
+            scrollTop(value) {
+                return arguments.length ? locoScroll.scrollTo(value, { duration: 0, disableLerp: true }) : locoScroll.scroll.instance.scroll.y;
+            },
+
+            getBoundingClientRect() {
+                return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+            },
+
+            pinType: document.querySelector(root).style.transform ? "transform" : "fixed"
+        });
+
+        ScrollTrigger.addEventListener("refresh", ()=>{
+            locoScroll.update();
+        });
+        ScrollTrigger.defaults({ scroller: container });
+
+    }, [start, root]);
 }
 
 export default useSmoothScroll;

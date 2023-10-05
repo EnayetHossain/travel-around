@@ -34,7 +34,7 @@ const HeroSection = () => {
             }, "once").fromTo(".end h1", {
                 x: "0%"
             }, {
-                x: "-30%",
+                x: "-25%",
             }, "once")
 
             // animate text on scroll
@@ -63,7 +63,7 @@ const HeroSection = () => {
 
 
     return (
-        <section className='hero-section desktop-max'>
+        <section className='hero-section desktop-max' data-scroll-section>
             <div className='about link'>
                 <Link to="/about">Know More<br />About Us</Link>
             </div>

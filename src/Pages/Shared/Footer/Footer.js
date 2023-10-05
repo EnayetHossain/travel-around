@@ -4,7 +4,7 @@ import "./Footer.css";
 
 const Footer = () => {
     return (
-        <footer className='desktop-max'>
+        <footer className='desktop-max' data-scroll-section>
             <div className='copyright'>
                 <p>&copy; 2023 Enayet Hossain All right reserved</p>
                 <p className='developed'>Developed by: Enayet Hossain</p>
