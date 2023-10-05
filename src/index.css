@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --primary-color: 29, 29, 29;
-  --secondary-color: 255, 245, 229;
+  --primary-color: 30, 33, 36;
+  --secondary-color: 229, 230, 235;
   --yellow-color: 250, 221, 75;
   --red-color: 232, 82, 67;
   --white: 255, 255, 255;
@@ -26,8 +26,8 @@ html {
 }
 
 .light-mode {
-  --primary-color: 255, 245, 229;
-  --secondary-color: 29, 29, 29;
+  --primary-color: 229, 230, 235;
+  --secondary-color: 30, 33, 36;
 }
 
 .desktop-max {
@@ -46,13 +46,6 @@ body {
   transition: 0.5s ease-in-out;
   height: 100vh;
 }
-
-/* #root {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

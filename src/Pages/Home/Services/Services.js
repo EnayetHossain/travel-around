@@ -1,12 +1,14 @@
 import gsap from 'gsap';
-import CSSRulePlugin from 'gsap/CSSRulePlugin';
-import React from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useLayoutEffect } from 'react';
 import { VscLinkExternal } from 'react-icons/vsc';
 import { Link } from 'react-router-dom';
+import image10 from "../../../assets/images/10.jpg";
+import image11 from "../../../assets/images/11.jpg";
+import image9 from "../../../assets/images/9.jpg";
 import "./Services.css";
 
-
-gsap.registerPlugin(CSSRulePlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
 
@@ -20,6 +22,22 @@ const Services = () => {
         gsap.fromTo(image, { opacity: 0.7, scale: 1.1 }, { opacity: 1, scale: 1, duration: 0.5 });
     }
 
+    useLayoutEffect(()=>{
+        const image = document.querySelector(".services-images>.image");
+
+        const animation = gsap.fromTo(image, {objectPosition: "50% 100%"}, {objectPosition: "50% 0%", duration: 1});
+
+        ScrollTrigger.create({
+            animation: animation,
+            trigger: ".services-content",
+            start: "top 60%",
+            end: "bottom 60%",
+            markers: false,
+            scrub: 1.2
+        })
+
+    }, [])
+
     return (
         <section className='services-section desktop-max' data-scroll-section>
             <div className='services-container'>
@@ -28,42 +46,42 @@ const Services = () => {
                 <div className='services-content'>
                     <div className='services-titles'>
                         <div className='link-wrapper'>
-                            <Link className="service-link" to={"/"} onMouseOver={() => handleMouseOver("https://plus.unsplash.com/premium_photo-1677343210638-5d3ce6ddbf85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80")}>
+                            <Link className="service-link" to={"/"} onMouseOver={() => handleMouseOver(image9)}>
 
                                 <span className="link-content">
                                     <span>Flights & Accommodations</span>
                                     <VscLinkExternal className="icon"></VscLinkExternal>
                                 </span>
 
-                                <img className="image" src="https://plus.unsplash.com/premium_photo-1677343210638-5d3ce6ddbf85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80" draggable="false" alt="travel" />
+                                <img className="image" src={image9} draggable="false" alt="travel" />
 
                             </Link>
 
                         </div>
 
                         <div className='link-wrapper'>
-                            <Link className="service-link" to={"/"} onMouseOver={() => handleMouseOver("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80")}>
+                            <Link className="service-link" to={"/"} onMouseOver={() => handleMouseOver(image11)}>
 
                                 <span className="link-content">
                                     <span>Guided Tours & Activities</span>
                                     <VscLinkExternal className="icon"></VscLinkExternal>
                                 </span>
 
-                                <img className="image" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" draggable="false" alt="travel" />
+                                <img className="image" src={image11} draggable="false" alt="travel" />
 
                             </Link>
 
                         </div>
 
                         <div className='link-wrapper'>
-                            <Link className="service-link" to={"/"} onMouseOver={() => handleMouseOver("https://images.unsplash.com/photo-1499403030326-90733b91b392?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80")}>
+                            <Link className="service-link" to={"/"} onMouseOver={() => handleMouseOver(image10)}>
 
                                 <span className="link-content">
                                     <span>Customized Itineraries</span>
                                     <VscLinkExternal className="icon"></VscLinkExternal>
                                 </span>
 
-                                <img className="image" src="https://plus.unsplash.com/premium_photo-1677343210638-5d3ce6ddbf85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80" draggable="false" alt="travel" />
+                                <img className="image" src={image10} draggable="false" alt="travel" />
 
                             </Link>
 
@@ -72,7 +90,7 @@ const Services = () => {
                     </div>
 
                     <div className='services-images'>
-                        <img className="image" src="https://plus.unsplash.com/premium_photo-1677343210638-5d3ce6ddbf85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80" draggable="false" alt="travel" />
+                        <img className="image" src={image9} draggable="false" alt="travel" />
                     </div>
                 </div>
             </div>

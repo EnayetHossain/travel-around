@@ -130,6 +130,7 @@
     opacity: 0;
     pointer-events: none;
     overflow-y: auto;
+    min-height: 100vh;
 }
 
 .main-menu-active {
