@@ -2,6 +2,7 @@ import React from 'react';
 import About from '../About/About';
 import Gallery from '../Gallery/Gallery';
 import HeroSection from "../HeroSection/HeroSection";
+import Services from '../Services/Services';
 import WhyUs from '../WhyUs/WhyUs';
 import "./Home.css";
 
@@ -12,6 +13,7 @@ const Home = () => {
             <About></About>
             <Gallery></Gallery>
             <WhyUs></WhyUs>
+            <Services></Services>
         </div>
     );
 };

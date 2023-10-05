@@ -34,7 +34,7 @@ const HeroSection = () => {
             }, "once").fromTo(".end h1", {
                 x: "0%"
             }, {
-                x: "-25%",
+                x: "-22%",
             }, "once")
 
             // animate text on scroll
@@ -44,7 +44,7 @@ const HeroSection = () => {
                 toggleActions: "play pause reverse none", //onEnter, onLeave, onEnterBAck, onLeaveBack
                 start: "top 20%",
                 markers: false,
-                scrub: 1.5,
+                scrub: 1.2,
             });
         }
 

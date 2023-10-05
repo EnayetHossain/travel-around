@@ -66,6 +66,10 @@ footer {
         height: 15em;
     }
 
+    .brands>svg {
+        margin: 1.3em 0;
+    }
+
     footer div {
         margin: 0.5em 0;
     }

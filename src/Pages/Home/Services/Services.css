@@ -1,0 +1,131 @@
+.services-section {
+    color: rgb(var(--secondary-color));
+    margin-bottom: 10em;
+}
+
+.services-container>p {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: rgba(var(--secondary-color), 0.7);
+    text-transform: uppercase;
+    padding-left: 1rem;
+}
+
+.services-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.services-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* background-color: red; */
+    width: min(77rem, 100%);
+    padding: 0 1em;
+}
+
+.services-images {
+    background-color: rgba(var(--secondary-color), 0.5);
+}
+
+.services-titles a {
+    font-size: clamp(2.1rem, 3.5vw, 4.7rem);
+    color: rgb(var(--secondary-color));
+    width: 100%;
+    margin: 0.5em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.services-titles a:hover {
+    color: rgba(var(--secondary-color), 0.5);
+}
+
+.link-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-wrapper .service-link>.image {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    object-position: center;
+    padding-top: 1em;
+    display: none;
+}
+
+.link-image-wrapper {
+    width: min(40rem, 100%);
+    height: 30rem;
+    overflow: hidden;
+}
+
+.link-image-wrapper>.image {
+    width: 100%;
+}
+
+.services-images {
+    width: min(42rem, 100%);
+    height: 54rem;
+    overflow: hidden;
+}
+
+.services-images>img {
+    width: min(42rem, 100%);
+    height: 54rem;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.link-wrapper:first-child {
+    border-top: 2px solid rgb(var(--secondary-color));
+    width: 100%;
+}
+
+.link-wrapper:first-child:hover {
+    border-color: rgba(var(--secondary-color), 0.5);
+}
+
+.link-wrapper+.link-wrapper {
+    border-top: 2px solid rgb(var(--secondary-color));
+    width: 100%;
+}
+
+.link-wrapper+.link-wrapper:hover {
+    border-color: rgba(var(--secondary-color), 0.5);
+}
+
+.link-wrapper:last-child {
+    border-bottom: 2px solid rgb(var(--secondary-color));
+    width: 100%;
+}
+
+.link-wrapper:last-child:hover {
+    border-color: rgba(var(--secondary-color), 0.5);
+}
+
+@media only screen and (max-width: 884px) {
+    .services-container>p {
+        margin-bottom: 3em;
+    }
+
+    .services-images {
+        display: none;
+    }
+
+    .link-wrapper .service-link>.image {
+        display: block;
+    }
+
+    .services-titles {
+        margin: 0 auto;
+    }
+}

@@ -1,29 +1,24 @@
 import React, { useEffect } from 'react';
 import scrollAnimation from '../../../Animations/ScrollAnimation';
-import isTouchDevice from '../../../utils/touchDevice';
 import "./About.css";
 
 const About = () => {
-    
-    useEffect(()=>{     
+
+    useEffect(() => {
         const titles = document.querySelectorAll(".about-title h1, .mission-title h1");
         const description = document.querySelector(".about-description");
 
-        const isTouch = isTouchDevice()
-        
-        if(!isTouch){
-            scrollAnimation(titles,".about-content:before", description, ".about-section", false)
-        }
+        scrollAnimation(titles, ".about-content:before", description, ".about-section")
 
     }, [])
-    
+
     return (
         <section className='about-section desktop-max' data-scroll-section>
             <div className='about-container'>
                 <p>About us</p>
 
                 <div className='about-content'>
-                    
+
                     <div className='about-title'>
                         <h1>OUR STORY &</h1>
                     </div>

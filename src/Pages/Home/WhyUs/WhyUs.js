@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import scrollAnimation from '../../../Animations/ScrollAnimation';
-import isTouchDevice from '../../../utils/touchDevice';
 import "./WhyUs.css";
 
 const WhyUs = () => {
@@ -8,11 +7,7 @@ const WhyUs = () => {
         const titles = document.querySelectorAll(".why-us-title h1, .why-us h1");
         const description = document.querySelector(".why-us-description");
 
-        const isTouch = isTouchDevice()
-
-        if (!isTouch) {
-            scrollAnimation(titles, ".why-us-content:before", description, ".why-us-section")
-        }
+        scrollAnimation(titles, ".why-us-content:before", description, ".why-us-section")
 
     }, [])
     return (

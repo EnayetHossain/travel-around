@@ -12,7 +12,6 @@ const useSmoothScroll = (start, root) => {
 
 
         const container = document.querySelector(root);
-        console.log(container);
 
         const locoScroll = new LocomotiveScroll({
             el: container,
