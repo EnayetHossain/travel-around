@@ -4,6 +4,7 @@ import Main from '../Layouts/Main';
 import AboutUs from '../Pages/AboutUs/AboutUs';
 import Home from '../Pages/Home/Home/Home';
 import NotFound from '../Pages/NotFound/NotFound';
+import ServicesPage from '../Pages/ServicesPage/ServicesPage';
 
 export const router = createBrowserRouter([
     {
@@ -19,6 +20,11 @@ export const router = createBrowserRouter([
             {
                 path: "/about",
                 element: <AboutUs></AboutUs>
+            },
+
+            {
+                path: "/services",
+                element: <ServicesPage></ServicesPage>
             }
         ]
     }

@@ -1,0 +1,11 @@
+.service-description {
+    font-size: 3rem;
+    color: rgb(var(--secondary-color));
+    text-align: center;
+    font-weight: 600;
+}
+
+.service-full {
+    width: 100%;
+    padding: 3em 0;
+}
