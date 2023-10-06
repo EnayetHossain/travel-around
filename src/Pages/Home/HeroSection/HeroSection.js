@@ -72,7 +72,7 @@ const HeroSection = () => {
             </div>
 
             <div className='process link'>
-                <Link to="/process">Our<br />process</Link>
+                <Link to="/contact-us">Contact<br />us</Link>
             </div>
 
             <div className='hero-content'>

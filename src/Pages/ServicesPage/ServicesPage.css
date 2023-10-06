@@ -1,5 +1,5 @@
 .service-description {
-    font-size: 3rem;
+    font-size: clamp(2rem, 2.3vw, 3rem);
     color: rgb(var(--secondary-color));
     text-align: center;
     font-weight: 600;

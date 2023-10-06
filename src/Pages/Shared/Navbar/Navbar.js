@@ -40,6 +40,7 @@ const Navbar = () => {
                         <p>who we are</p>
                         
                         <ul className='about-us-options'>
+                            <li className='menu-option'><Link className='menu-link' to={"/"}>Home</Link></li>
                             <li className='menu-option'><Link className='menu-link' to={"/about"}>Know about us</Link></li>
                             <li className='menu-option'><Link className='menu-link' to={"/services"}>Services</Link></li>
                         </ul>

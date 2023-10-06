@@ -19,7 +19,6 @@ const ServicesPage = () => {
                             <VscLinkExternal className="icon"></VscLinkExternal>
                         </span>
                     </Link>
-
                 </div>
 
                 <div className='link-wrapper'>
@@ -40,7 +39,6 @@ const ServicesPage = () => {
                             <VscLinkExternal className="icon"></VscLinkExternal>
                         </span>
                     </Link>
-
 
                 </div>
             </div>
