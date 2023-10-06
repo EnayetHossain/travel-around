@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import React, { useLayoutEffect } from 'react';
+import React, { useEffect } from 'react';
 import { VscLinkExternal } from 'react-icons/vsc';
 import { Link } from 'react-router-dom';
 import image10 from "../../../assets/images/10.jpg";
@@ -22,7 +22,7 @@ const Services = () => {
         gsap.fromTo(image, { opacity: 0.7, scale: 1.1 }, { opacity: 1, scale: 1, duration: 0.5 });
     }
 
-    useLayoutEffect(()=>{
+    useEffect(()=>{
         const image = document.querySelector(".services-images>.image");
 
         const animation = gsap.fromTo(image, {objectPosition: "50% 100%"}, {objectPosition: "50% 0%", duration: 1});

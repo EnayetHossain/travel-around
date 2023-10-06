@@ -1,12 +1,14 @@
 .about-section,
-.why-us-section {
+.why-us-section,
+.contact-section {
     color: rgb(var(--secondary-color));
     margin: 10em auto;
     padding: 3em 1em;
 }
 
 .about-container>p,
-.why-us-container>p {
+.why-us-container>p,
+.contact-container>p {
     font-size: 2.3rem;
     font-weight: 700;
     color: rgba(var(--secondary-color), 0.7);
@@ -15,7 +17,8 @@
 }
 
 .about-content,
-.why-us-content {
+.why-us-content,
+.contact-content {
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
@@ -38,21 +41,26 @@
 .about-title,
 .mission-title,
 .why-us-title,
-.why-us {
+.why-us,
+.contact-title,
+.sub-title {
     overflow: hidden;
 }
 
 .about-title h1,
 .mission-title h1,
 .why-us-title h1,
-.why-us h1 {
+.why-us h1,
+.contact-title h1,
+.sub-title h1 {
     font-size: clamp(3.5rem, 8.5vw, 9.3rem);
     font-weight: 700;
     line-height: 1.2;
 }
 
 .about-description,
-.why-us-description {
+.why-us-description,
+.contact-description {
     font-size: 3rem;
     font-weight: 600;
     word-wrap: break-word;

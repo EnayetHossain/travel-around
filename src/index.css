@@ -38,13 +38,17 @@ html {
 
 body {
   /* font-family: 'Poppins', sans-serif; */
-  font-family: 'Noto Sans JP', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(var(--primary-color));
   font-size: 1.6rem;
   transition: 0.5s ease-in-out;
   height: 100vh;
+}
+
+body,
+textarea {
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 code {
