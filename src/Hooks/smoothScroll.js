@@ -34,7 +34,7 @@ const useSmoothScroll = (start, root) => {
             pinType: document.querySelector(root).style.transform ? "transform" : "fixed"
         });
 
-        ScrollTrigger.addEventListener("refresh", ()=>{
+        ScrollTrigger.addEventListener("refresh", () => {
             locoScroll.update();
         });
         ScrollTrigger.defaults({ scroller: container });

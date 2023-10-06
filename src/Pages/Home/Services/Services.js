@@ -8,8 +8,6 @@ import image11 from "../../../assets/images/11.jpg";
 import image9 from "../../../assets/images/9.jpg";
 import "./Services.css";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Services = () => {
 
     const handleMouseOver = (src) => {
@@ -23,6 +21,7 @@ const Services = () => {
     }
 
     useEffect(()=>{
+        gsap.registerPlugin(ScrollTrigger);
         const image = document.querySelector(".services-images>.image");
 
         const animation = gsap.fromTo(image, {objectPosition: "50% 100%"}, {objectPosition: "50% 0%", duration: 1});

@@ -40,8 +40,8 @@ const Navbar = () => {
                         <p>who we are</p>
                         
                         <ul className='about-us-options'>
-                            <li className='menu-option'><Link to={"/about"}>Know about us</Link></li>
-                            <li className='menu-option'><Link to={"/services"}>Services</Link></li>
+                            <li className='menu-option'><Link className='menu-link' to={"/about"}>Know about us</Link></li>
+                            <li className='menu-option'><Link className='menu-link' to={"/services"}>Services</Link></li>
                         </ul>
                     </div>
 
@@ -75,8 +75,8 @@ const Navbar = () => {
 
             <div className='menu-options'>
                 <ul className='menu-items'>
-                    <li className='menu-item'><Link to={"/about"}>About us</Link></li>
-                    <li className='menu-item'><Link to={"/services"}>Services</Link></li>
+                    <li className='menu-item'><Link className='menu-link' to={"/about"}>About us</Link></li>
+                    <li className='menu-item'><Link className='menu-link' to={"/services"}>Services</Link></li>
                 </ul>
 
                 <div className='theme'>
